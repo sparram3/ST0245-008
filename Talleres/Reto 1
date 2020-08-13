@@ -1,0 +1,38 @@
+ Taller de análisis de tiempo de ejecución entre la función factorial recursiva e iterativa
+
+Realizado por:
+-Myllee Sarleth Mosquera Rivas- 202010024101
+-Santiago Parra Mejía- 202010005101
+
+¿Qué problemas se presentaron y si se presentan por que se presentan?
+Los tiempos de ejecución entre la función recursiva e iterativa cambiaban drásticamente, lo cual 
+no nos permitía hacer un buen análisis para poder analizar que función nos da un mejor tiempo de
+ejecución, por lo que tomamos la decisión de realizar un promedio, para así poder acercarnos un
+poco al tiempo de ejecución que se tiene normalmente. Consideramos que todos estos cambios en el
+tiempo se deben al procesador del computador y la pila del programa, ya que probamos el mismo
+código en 2 computadores distintos y los tiempos eran demasiado distintos, pues en algunos casos
+los tiempos de ejecución en uno de los computadores era cero en cambio en el otro recibíamos valores
+más altos.
+
+Al ingresar números demasiado altos en la función recursiva nos arrojaba un error porque la
+recursión se extiende demasiado ya que tiene que llamarse a sí mismo demasiadas veces. Realizamos
+una prueba con el número 1000 y notamos que en la función recursiva nos arrojaba el error debido a
+lo anterior, en cambio en la función iterativa nos arroja el valor del factorial correctamente, por
+lo que consideramos que si, por ejemplo, cambiáramos el caso base a 500 y que retorne el factorial
+de 500, no tendrá que llamarse tantas veces a sí mismo, parará en 500. Si tenemos en cuenta el
+tiempo de ejecución que tendría al realizar cálculos tan altos como este, tan solo seria cuestión
+de sumar el tiempo de ejecución que se tuvo al calcular el factorial de 500 (Considerando que se
+haga una prueba por fuera de la función) y el tiempo obtenido al ejecutar la función.
+ 
+¿Qué decisión tomarías al requerir implementar la función factorial. ¿Cuál es la mejor opción entre
+la recursiva y la iterativa? ¿Por qué?
+
+Si calculamos la razón entre el tiempo de ejecución de la función recusiva y el de la función
+iterativa (El cual corresponde a la columna “Relación” de la tabla) notaremos que casi siempre es
+mayor que 1, y a medida que n crece, este número también va creciendo, lo que significa que el
+tiempo de la función recursiva se hace más grande respecto al tiempo de la iterativa, siendo la
+iterativa más optima.
+
+La mejor decisión sería usar la función iterativa ya que en esta los tiempos de ejecución son más
+pequeños que en la recursiva y nos permite agregar valores demasiado altos como lo mencionamos
+anteriormente.
