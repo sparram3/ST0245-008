@@ -1,0 +1,19 @@
+#Punto 9 Parcial
+def pascal(row, column):
+    if row < 0 and column < 0:
+        return 0
+    elif row == 0 and column == 0:
+        return 1
+    elif row < column:
+        return 0
+    else:
+        return pascal(row-1, column-1) + pascal(row-1, column)
+
+def triangulo(n):
+    for j in range(n):
+        for i in range(j+1):
+            print(pascal(j, i), "", end="")
+        print()
+
+n=int(input("Ingresa el número de filas: "))
+triangulo(n)
