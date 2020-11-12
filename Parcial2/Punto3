@@ -1,0 +1,13 @@
+def posorden(pre, ino):
+  if len(pre) == 0 and len(ino) == 0:
+    return
+  pos = 0
+  for i in range(len(ino)):
+    if ino[i] == pre[0]:
+      pos = i
+      break
+  posorden(pre[1:pos+1], ino[:pos])
+  posorden(pre[pos+1:], ino[pos+1:])
+  print(pre[0], end ="")
+
+posorden("GEAIBMCLDFKJH", "IABEGLDCFMKHJ")
