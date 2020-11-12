@@ -1,0 +1,29 @@
+class Pila:
+  def __init__(self):
+    self.items = []
+
+  def push(self, elem):
+    return self.items.append(elem)
+
+  def isEmpty(self):
+    return False if len(self.items) else True
+
+  def pop(self):
+    return self.items.pop()
+  
+  def imprimir(self):
+    print(pila1.items)
+
+  def invertirPila(self):
+    nueva = Pila()
+    while self.isEmpty() is not True:
+      r = self.pop()
+      nueva.push(r)
+    return nueva
+    
+pila1 = Pila()
+for i in [1,2,3,4,5]:
+  pila1.push(i)
+invertida = pila1.invertirPila()
+print("Se ha invertido la pila")
+print("Pila creada:", invertida.items)
